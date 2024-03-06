@@ -34,7 +34,11 @@ echo "[${PRETTY_NAME}]"
 
 # Update (download) package information from all configured sources.
 sudo apt-get update 
-sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux man-db manpages-posix manpages-dev manpages-posix-dev
+sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux
+# Skip `man` on "minimized" ubuntu;
+if [ ! -e "/etc/dpkg/dpkg.cfg.d/excludes" ]; then
+    sudo apt-get install man-db manpages-posix manpages-dev manpages-posix-dev
+fi
 
 # Install followings,
 #   1. build-essential (gcc, make, and so on)
