@@ -13,17 +13,15 @@
 - `net-tools`
 - `tmux`
 - `man-db` `manpages-posix` `manpages-dev` `manpages-posix-dev`
-   > **NOTE**: The "minimized" Ubuntu makes some rules in `/etc/dpkg/dpkg.cfg.d/excludes`,
-   > which include excluding man and all manpages from being installed.
-   > It also switches the man binary to be a file that outputs the message you saw about a minimized Ubuntu.
-   > You can edit the file `/etc/dpkg/dpkg.cfg.d/excludes` and **_comment out the following line_**:
-   > ```sh
-   > path-exclude=/usr/share/man
-   > ```
-   > Then, you can `apt update` and install `man` and `manpages`
+   > **NOTE**: The "minimized" Ubuntu: `unminimize` command first for `man`
 
 ```sh
-sudo apt-get update && sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux man-db manpages-posix manpages-dev manpages-posix-dev
+sudo apt-get update && sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux
+
+# Skip `man-db` package on "Minimized" Ubuntu
+if [ ! -e "/etc/dpkg/dpkg.cfg.d/excludes" ]; then
+    sudo apt-get install man-db manpages-posix manpages-dev manpages-posix-dev
+fi
 ```
 
 ## 1.2. Basic Development Packages
