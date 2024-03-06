@@ -166,7 +166,9 @@ fi
 echo "export PATH=\"\$PATH:${INSTALL_DIR}/${SWIFT_DIR_NAME}/usr/bin\"" > /etc/profile.d/swift.sh
 source /etc/profile
 ```
-`# or just update $PATH`
+
+_or_ just update `PATH`
+
 ```sh
 export PATH="$PATH:${INSTALL_DIR}/${SWIFT_DIR_NAME}/usr/bin"
 ```
