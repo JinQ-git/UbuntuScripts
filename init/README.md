@@ -23,7 +23,7 @@
    > Then, you can `apt update` and install `man` and `manpages`
 
 ```sh
-sudo apt-get update　&& sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux man-db manpages-posix manpages-dev manpages-posix-dev
+sudo apt-get update && sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux man-db manpages-posix manpages-dev manpages-posix-dev
 ```
 
 ## 1.2. Basic Development Packages
