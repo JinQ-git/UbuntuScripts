@@ -57,6 +57,18 @@ else
     sudo apt-get install -y openjdk-21-jdk dotnet-sdk-8.0
 fi
 
+# Install Additional Libraries
+#   1. pthread
+#   2. glfw3
+#   3. glew
+#   4. vulkan
+#   5. freetype
+sudo apt-get install -y libpthread-stubs0-dev libglfw3-dev libglew-dev libvulkan-dev vulkan-validationlayers-dev libpng-dev libfreetype-dev
+#   -. mesa tools (glxinfo, and so on)
+sudo apt-get install -y mesa-utils vulkan-tools
+# 6. FFmpeg (optional)
+# sudo apt-get install -y libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev
+
 ### From `script` ###
 
 # LLVM (clang) - latest
