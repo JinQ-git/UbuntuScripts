@@ -66,6 +66,8 @@ fi
 sudo apt-get install -y libpthread-stubs0-dev libglfw3-dev libglew-dev libvulkan-dev vulkan-validationlayers-dev libpng-dev libfreetype-dev
 #   -. mesa tools (glxinfo, and so on)
 sudo apt-get install -y mesa-utils vulkan-tools
+#   -. Mesa Off-screen rendering extension
+# sudo apt-get install -y libosmesa6-dev
 # 6. FFmpeg (optional)
 # sudo apt-get install -y libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev
 
