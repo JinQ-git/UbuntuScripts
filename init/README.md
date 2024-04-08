@@ -64,7 +64,7 @@ sudo apt-get install -y openjdk-21-jdk dotnet-sdk-8.0
 > **NOTE:** this method is for a single user.
 
 ```sh
-curl -fsSL https://get.docker.com | sudo -E bash -
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### 1.3.1. LLVM (clang) - latest
