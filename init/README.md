@@ -12,11 +12,12 @@
 - `vim`
 - `net-tools`
 - `tmux`
+- `libxml2-utils`
 - `man-db` `manpages-posix` `manpages-dev` `manpages-posix-dev`
    > **NOTE**: The "minimized" Ubuntu: `unminimize` command first for `man`
 
 ```sh
-sudo apt-get update && sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux
+sudo apt-get update && sudo apt-get install -y ca-certificates openssh-server curl vim net-tools tmux libxml2-utils
 
 # Skip `man-db` package on "Minimized" Ubuntu
 if [ ! -e "/etc/dpkg/dpkg.cfg.d/excludes" ]; then
